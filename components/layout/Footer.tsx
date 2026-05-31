@@ -68,7 +68,7 @@ export default function Footer() {
                         {item.label}
                       </Link>
                       <div className="ml-3 flex flex-col gap-2 border-l border-white/10 pl-3">
-                        {item.children.map((child) => (
+                        {item.children?.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}

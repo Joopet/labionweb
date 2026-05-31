@@ -131,7 +131,7 @@ const initialContent: AdminContent = {
     summary: item.summary,
     note: item.note,
     steps: item.steps,
-    image: item.image,
+    image: "/images/case-placeholder.jpg",
   })),
   facilities: facilities.map((item) => ({
     id: item.id,
