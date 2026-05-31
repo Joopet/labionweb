@@ -82,7 +82,7 @@ export default function Header() {
 
                     <div className="pointer-events-none absolute left-1/2 top-full w-64 -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
                       <div className="overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white shadow-xl shadow-[#00377b]/10">
-                        {item.children.map((child) => (
+                        {item.children?.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
@@ -165,7 +165,7 @@ export default function Header() {
                       <span className="rounded-full bg-[#eef6ff] px-2 py-1 text-xs font-bold text-[#00377b]">상위</span>
                     </Link>
                     <div className="ml-4 mt-1 rounded-2xl bg-[#f8fbff] p-2">
-                      {item.children.map((child) => (
+                      {item.children?.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}

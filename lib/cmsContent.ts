@@ -99,7 +99,7 @@ export const staticCmsContent: CmsSiteContent = {
     title: notice.title,
     description: notice.description,
     ctaLabel: notice.ctaLabel,
-    ctaUrl: notice.ctaUrl,
+    ctaUrl: notice.primaryCta.href,
   })),
   trustMetrics: trustIndicators.map((metric) => ({
     id: metric.id,
@@ -116,14 +116,14 @@ export const staticCmsContent: CmsSiteContent = {
     animal: item.animal,
     summary: item.summary,
     note: item.note,
-    image: item.image,
+    image: "/images/case-placeholder.jpg",
     steps: item.steps,
   })),
   facilities: facilities.map((item) => ({
     id: item.id,
     title: item.title,
     description: item.description,
-    image: item.image,
+    image: "/images/case-placeholder.jpg",
   })),
   staff: staff.map((doctor) => ({
     id: doctor.id,
@@ -133,6 +133,11 @@ export const staticCmsContent: CmsSiteContent = {
     nameEn: doctor.nameEn,
     philosophy: doctor.philosophy,
     image: doctor.image,
-    credentials: doctor.credentials,
+    credentials: [
+    ...doctor.education,
+    ...doctor.certifications,
+    ...doctor.experience,
+    ...doctor.training,
+    ],
   })),
 }

@@ -137,7 +137,7 @@ const initialContent: AdminContent = {
     id: item.id,
     title: item.title,
     description: item.description,
-    image: item.image,
+    image: "/images/case-placeholder.jpg",
   })),
   staff: staff.map((doctor) => ({
     id: doctor.id,
